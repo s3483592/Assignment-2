@@ -1,0 +1,287 @@
+
+/* SITE WIDE CSS  START */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+            font-family: 'Dosis', sans-serif;
+            font: 1em/1.2 ;
+        }
+        
+        h1 {
+            font-size: 2.25em;
+        }
+        
+        h2 {
+            font-size: 1.75em;
+            background-color: #39b6fe;
+            padding: 6.75px;
+        }
+
+        
+        h3 {
+            font-size: 1.375em;
+        }
+        
+        h4 {
+            font-size: 1.125em;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 .5em;
+            font-weight: 500;
+            line-height: 1.1;
+            font-family: 'Noticia Text', serif;
+        }
+        
+        .container {
+            max-width: 70em;
+            margin: 0 auto;
+        }
+        
+        .container-flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 70em;
+            margin: 0 auto;
+        }
+        
+        
+        
+        .content {
+            padding: 1em 1.25em;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        
+                .content-full-height {
+            padding:1em 1.25em 200px;
+            background-color: #fff;
+            height: 68.5vh;
+            overflow: hidden;
+        }
+        
+        
+        p {
+            margin: 0 0 1.5em;
+            line-height: 1;
+        }
+        
+        header {
+            display: flex;
+            justify-content: center;
+            background: #1e1e1e;
+            width: 100%;
+        }
+        
+        nav {
+            height: 100px;
+        }
+        
+        .silverado {
+            font-size: 250%;
+            font-family: 'Noticia Text', serif;
+            padding: 20px;
+            color: #39b6fe;
+        }
+        
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #39b6fe;
+            top: 90px;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: #f8f8ff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Noticia Text', serif;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #1e1e1e;
+        }
+        
+        .active {
+            background-color: #1e1e1e;
+        }
+        
+        footer {
+            color: #f8f8ff;
+            background: #1e1e1e;
+            padding: 1em 1.25em;
+
+        }
+        
+        .img-responsive {
+            max-width: 100%;
+        }
+                .img-responsive-info {
+            max-width: 100%;
+            float: left;
+        }
+        
+        figure {
+            padding: 4px;
+        }
+        
+        
+         button {
+            width: 240px;
+            height: 40px;
+            background-color: #39b6fe;
+            color: #f8f8ff;
+            border: 0;
+            transition-duration: 0.4s;
+            padding-top: 5px;
+        }
+        
+        button:hover {
+            background-color: #1e1e1e;
+            color: #39b6fe;
+        }
+        
+        
+        article {
+            overflow: auto;
+        }
+        
+        br {
+    clear: right
+}
+        
+ /* SITE WIDE CSS  END */       
+        
+        .movie-schedule {
+            position: relative;
+            padding: 5px;
+        }
+           .wk-button{
+            width: 240px;
+            height: 40px;
+            background-color: #39b6fe;
+            color: #f8f8ff;
+            border: 0;
+            transition-duration: 0.4s;
+            padding-top: 5px;
+            margin: 5px;
+        }
+        
+                .wk-button:hover {
+            background-color: #1e1e1e;
+            color: #39b6fe;
+        }
+        
+        
+  /* Movie Schedule CSS  START */     
+        
+        #action-movie-info {
+            display: none;
+        }
+        
+        #children-movie-info{
+            display: none;
+        }
+        
+        #rom-com-info{
+            display: none;
+        }
+        
+        #art-foregin-info {
+            display: none;
+        }
+        
+        #mt-schedule {
+            display: none;
+           
+        }
+        
+        #wtf-schedule {
+            display: none;
+            
+        }
+        
+        #ss-schedule {
+            display: none;
+            
+        }
+        
+/* Movie Schedule CSS  END */      
+        
+/* Contact From CSS  START */         
+       .contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form fieldset {
+    display: block;
+    border: 0;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 20px;
+    padding-right: 40px;
+}
+
+.contact-form input {
+    display: block;
+    width: 400px;
+}
+
+.contact-select {
+        display: block;
+    width: 400px;
+}
+
+.textarea-contact {
+     display: block;
+    width: 400px;
+    height: 200px;
+}
+
+/* Contact From CSS  END */  
+
+/* PRICE CSS  START */
+
+ .price-flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 70em;
+            margin: 0 auto;
+        }
+        
+        .price-1 {
+            margin: 20px;
+            border: 2px solid #39b6fe;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+                .price-2 {
+                        margin: 20px;
+            border: 2px solid #39b6fe;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+ /* PRICE CSS  END */
