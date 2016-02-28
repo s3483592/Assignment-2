@@ -11,33 +11,107 @@ if ( ! isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();           ## make sure cart exists
     }
     
+function addToCart($product_id){
+   
+   if (!isset($_SESSION['cart'][$product_id])) {
+       $_SESSION['cart'][$product_id] = 1;
+   }else {
+      $_SESSION['cart'][$product_id] += 1;
+   }
+   
+}
+
+function updateCart($product_id, $qty){
+  $_SESSION['cart'][$product_id] = $qty;
+}
+
+function removeItem($product_id){
+  unset($_SESSION['cart'][$product_id]);
+}
+
+
+function getDetails($product_id){
+  $tempProduct = array();
+  
+  if ($product_id == 'SA') {
+      $tempProduct['product_name'] = 'Standard Adult';
+      $tempProduct['product_price'] = 12;
+
+  }
+  elseif ($product_id == 'SP') {
+      $tempProduct['product_name'] = 'Standard Concession'; 
+      $tempProduct['product_price'] = 10;
+
+  }
+  elseif ($product_id == 'SC') {
+      $tempProduct['product_name'] = 'Standard Child'; 
+      $tempProduct['product_price'] = 8;
+
+  }
+  elseif ($product_id == 'FA') {
+      $tempProduct['product_name'] = 'First Class Adult'; 
+      $tempProduct['product_price'] = 25;
+
+  }
+  elseif ($product_id == 'FC') {
+      $tempProduct['product_name'] = 'First Class Child'; 
+      $tempProduct['product_price'] = 20;
+
+  }
+  elseif ($product_id == 'B1') {
+      $tempProduct['product_name'] = 'Beanbag'; 
+      $tempProduct['product_price'] = 20;
+
+  }
+  return $tempProduct;
+}
+
+function calculateCart(){
+  $cart = $_SESSION['cart'];
+  $price = 0;
+  
+  //Cycles through each product and adds up their qty with the prices
+  foreach($cart as $product_id => $qty){
+    $product_details = array();
+    $product_details = getDetails($product_id);
     
-    ## Add to Cart
-    function add($product) {
-        if(isset($_SESSION['cart'][$product['id']])) {
-            $_SESSION['cart'][$product['id']]['qty'] ++;
-            return TRUE;
-        } else {
-            $_SESSION['cart'][$product['id']] = $product;
-            $_SESSION['cart'][$product['id']]['qty'] = 1;
-            return TRUE;
-        }
-        return FALSE;
-    }
-    
-     ## Remove from Cart
-    function remove($id) {
-        if(isset($_SESSION['cart'][$id])) {
-            if ($_SESSION['cart'][$id]['qty'] > 1) {
-                $_SESSION['cart'][$id]['qty'] --;            
-            } else {
-                unset($_SESSION['cart'][$id]);
-            }
-            return TRUE;
-        } else {
-          return FALSE;
-        }
-        return FALSE;
-    }
-    
+    $price += $qty * $product_details['product_price'];
+  }
+
+  return $price;
+}
+
+function writeOrders($fname, $sname, $price, $email, $Phone_number){
+  $filehandle = fopen("orders.txt", "a");
+  $cart = array();
+  $cart = $_SESSION['cart'];
+  $cart_string = "";
+  
+  $order_details = array();
+  
+  //Stores the details into an array, makes it easier to implode
+  $order_details[] = $fname;
+  $order_details[] = $sname;
+  $order_details[] = $price;
+  $order_details[] = $email;
+  $order_details[] = $Phone_number;
+
+  
+  //Cycles through the shopping cart and creates a string
+  foreach($cart as $product_id => $product_qty){
+    $product_details = array();
+    $product_details = getDetails($product_id);
+    $cart_string .= ":".$product_details['product_name']."=".$product_qty;
+  }
+  
+  $order_string = implode("|", $order_details);
+  
+  $order_string .= $cart_string;
+  
+  fwrite($filehandle, "$order_string\n");
+  
+  fclose($filehandle);
+
+}
+
     ?>

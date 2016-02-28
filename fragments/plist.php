@@ -14,7 +14,7 @@ $PRODUCT = array();
     $PRODUCT['product2']['Price']   = 10;
     
     $PRODUCT['product3'] = array();
-    $PRODUCT['product3']['Ticket']    = 'Standard Concession';    
+    $PRODUCT['product3']['Ticket']    = 'Standard Child';    
     $PRODUCT['product3']['id']      = 'SC';
     $PRODUCT['product3']['Price']   = 8;
 
