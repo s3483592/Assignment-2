@@ -7,7 +7,7 @@
         </ul>
     </nav>
     <div class="content-full-height">
-        <div class="container">
+        <div class="container-main">
 
             <h2> Contact Us</h2>
                 <form class="contact-form" action="http://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="POST" name="contact-form">
@@ -26,5 +26,7 @@
        </fieldset>
     </form>
         </div>
-        
+            
+
     </div>
+    <?php require('fragments/footer.php') ?>

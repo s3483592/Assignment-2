@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require('fragments/global-functions.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -10,8 +10,7 @@
     <?php require('fragments/header.php') ?>
         
         <?php include_once('fragments/home-content.php') ?>
-    
-<?php require('fragments/footer.php') ?>
+   <?php require('fragments/footer.php') ?>
 </body>
 
 </html>
