@@ -52,6 +52,14 @@
             margin: 0 auto;
         }
         
+                .container-flex-booking {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 70em;
+            margin: 0 auto;
+        }
+        
         
         
         .content {
@@ -349,3 +357,9 @@
             background-color: #1e1e1e;
             color: #39b6fe;
         }        
+        
+        
+ .print-ticket {
+     width: 30em;
+     border: 1px solid black;
+ }      

@@ -10,7 +10,7 @@
         <div class="container-main">
 
             <h2> Contact Us</h2>
-                <form class="contact-form" action="http://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="POST" name="contact-form">
+                <form class="contact-form" action="print.php" method="POST" name="contact-form">
         <fieldset>
             <label>Email</label><br/>
             <input type="email" name="email" placeholder="Enter Your Email Address" required oninvalid="this.setCustomValidity('Please Enter a valid email address')"><br/>

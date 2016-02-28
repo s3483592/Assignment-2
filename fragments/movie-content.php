@@ -103,7 +103,7 @@
                     of the First Order.</p>
                 <img src="assets/img/m.jpeg" alt="M rating" class="img-responsive">
                 <form method="POST" action="booking.php">
-                    <input type="hidden" name="Movie" value="Action Movie" />
+                    <input type="hidden" name="Movie" value="Star Wars - The Force Awakens" />
                     <select name="Day">
                         <option> MON</option>
                         <option> TUES</option>
@@ -152,7 +152,7 @@
                 <br/>
                 <img src="assets/img/pg.jpeg" alt="M rating" class="img-responsive">
                 <form method="POST" action="booking.php">
-                    <input type="hidden" name="Movie" value="Children Movie" />
+                    <input type="hidden" name="Movie" value="The Good Dinosaur" />
                     <br/>
                     <select name="Day">
 
@@ -202,7 +202,7 @@
                     </p>
                 <img src="assets/img/m.jpeg" alt="M rating" class="img-responsive">
                 <form method="POST" action="booking.php">
-                    <input type="hidden" name="book" value="RC" />
+                    <input type="hidden" name="Movie" value="How To Be Single" />
                     <br/>
                     <select name="Days">
                         <br/>
@@ -250,7 +250,7 @@
                     Yifeng, Kris Wu and Zhang Hanyu.</p>
                 <img src="assets/img/ma.jpeg" alt="M rating" class="img-responsive">
                 <form method="POST" action="booking.php">
-                    <input type="hidden" name="book" value="AF" />
+                    <input type="hidden" name="Movie" value="Mr. Six" />
                     <br/>
                     <select name="Days">
                         <option> MON</option>

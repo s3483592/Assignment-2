@@ -8,7 +8,7 @@ session_start();
 ### -- cart functions -- ##
 
 if ( ! isset($_SESSION['cart'])) {  
-        $_SESSION['cart'] = array();           ## make sure cart exists
+        $_SESSION['cart'] = array();           
     }
     
 function addToCart($product_id){
@@ -70,7 +70,7 @@ function calculateCart(){
   $cart = $_SESSION['cart'];
   $price = 0;
   
-  //Cycles through each product and adds up their qty with the prices
+  
   foreach($cart as $product_id => $qty){
     $product_details = array();
     $product_details = getDetails($product_id);
@@ -89,7 +89,7 @@ function writeOrders($fname, $sname, $price, $email, $Phone_number){
   
   $order_details = array();
   
-  //Stores the details into an array, makes it easier to implode
+  
   $order_details[] = $fname;
   $order_details[] = $sname;
   $order_details[] = $price;
@@ -97,7 +97,7 @@ function writeOrders($fname, $sname, $price, $email, $Phone_number){
   $order_details[] = $Phone_number;
 
   
-  //Cycles through the shopping cart and creates a string
+  
   foreach($cart as $product_id => $product_qty){
     $product_details = array();
     $product_details = getDetails($product_id);
